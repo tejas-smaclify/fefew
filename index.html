@@ -7,6 +7,35 @@
   </head>
   <body>
     <div name="widget-holder">
+
+      <script type="text/javascript" src="http://www.linkedin.com/uas/in.js">
+        api_key: "7767h8fy86qiyo"
+        extensions: "ATSIntegrationWidget@https://platform.linkedin.com/rsc/extensions/onboarding-widget"
+      </script>
+      
+      <script type="IN/ATSIntegrationWidget"
+        data-supported-bundled-integration-types="RECRUITER_SYSTEM_CONNECT_COMPANY,RECRUITER_SYSTEM_CONNECT_CONTRACT,APPLY_WITH_LINKEDIN"
+        data-onintegrate="handleIntegrations"
+        data-width="100" >
+      </script>
+      
+      <script>
+      /**
+      * This callback should:
+      *   1) Store the customer's integration in your ATS. These values are used to throughout the Middleware Platform's API.
+      *   2) Tell your server to create and configure customer integrations via the Middleware Platform using this data.
+      * @param {Object[]} integrations
+      * @param {string} integrations[].integrationContext
+      * @param {string} integrations[].integrationType
+      * @param {string} integrations[].tenantType
+      */ 
+      function handleIntegrations (integrations) {
+      //Your code here
+      
+      }
+      </script>
+
+
       <script
         type="text/javascript"
         src="https://platform.linkedin.com/xdoor/scripts/in.js"
