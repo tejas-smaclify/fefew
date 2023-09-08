@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div name="widget-holder">
+      <script
+        type="text/javascript"
+        src="https://platform.linkedin.com/xdoor/scripts/in.js"
+      >
+        api_key: "7767h8fy86qiyo"
+        extensions:"AwliWidget@https://www.linkedin.com/talentwidgets/extensions/apply-with-linkedin-widget-v3"
+      </script>
+      <script
+      type="IN/AwliWidget" 
+        data-mode="BUTTON_DATA"
+        data-integration-context="urn:li:organization:99972226"
+        data-callback-method="handleProfileData"
+        data-company-job-code="1234"
+      ></script>
+
+      <script>
+        function handleProfileData(profileData) {
+          console.warn("logged")
+          var firstnameField = document.getElementById("firstname");
+          var lastnameField = document.getElementById("lastname");
+          firstnameField.value = profileData.firstName;
+          lastnameField.value = profileData.lastName;
+        }
+        // prefill form with profile data
+      </script>
+    </div>
+  </body>
+</html>
